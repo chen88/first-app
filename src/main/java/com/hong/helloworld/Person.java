@@ -1,7 +1,6 @@
 package com.hong.helloworld;
 
 import net.karneim.pojobuilder.GeneratePojoBuilder;
-import org.apache.tomcat.jni.Local;
 
 import java.time.LocalDateTime;
 
@@ -23,12 +22,11 @@ public class Person {
   }
 
   @GeneratePojoBuilder(withFactoryMethod = "newBuilder", withCopyMethod = true)
-  public Person(String firstName, String lastName, int age, String role, LocalDateTime created) {
+  public Person(String firstName, String lastName, int age, String role) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
     this.role = role;
-    this.created = created;
   }
 
   @GeneratePojoBuilder(withFactoryMethod = "newBuilder", withCopyMethod = true)
